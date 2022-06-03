@@ -1,0 +1,1 @@
+[2022-06-03 16:45:59,302][cronitor.monitor][ERROR] - No API key detected. Set cronitor.api_key or initialize Monitor with kwarg.

@@ -1,0 +1,843 @@
+Script updated at 2022-05-31 22:00
+Script updated at 2022-05-31 22:31
+Script updated at 2022-05-31 23:00
+Script updated at 2022-05-31 23:30
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=AMJ%2CDVY%2CVYM%2CXLU%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=AMJ%2CDVY%2CVYM%2CXLU%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=AMJ%2CDVY%2CVYM%2CXLU%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=AMJ%2CDVY%2CVYM%2CXLU%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=DVY%2CAMJ%2CVYM%2CXLU%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=DVY%2CAMJ%2CXLU%2CVYM%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=DVY%2CAMJ%2CXLU%2CVYM%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=DVY%2CAMJ%2CXLU%2CVYM%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=DVY%2CAMJ%2CVYM%2CXLU%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=DVY%2CAMJ%2CVYM%2CXLU%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=DVY%2CAMJ%2CVYM%2CXLU%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=DVY%2CAMJ%2CVYM%2CXLU%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=DVY%2CAMJ%2CVYM%2CXLU%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=DVY%2CAMJ%2CVYM%2CXLU%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=DVY%2CAMJ%2CVYM%2CXLU%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=DVY%2CAMJ%2CVYM%2CXLU%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-05-31&limit=10000&symbols=DVY%2CAMJ%2CVYM%2CXLU%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 59, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 25, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 150, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 13, in <module>
+    from gsheets import update_gsheets
+ImportError: cannot import name 'update_gsheets' from 'gsheets' (/Users/samuelwong/Projects/GDS-dashboard/gsheets.py)
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 13, in <module>
+    from gsheets import update_gsheets
+ImportError: cannot import name 'update_gsheets' from 'gsheets' (/Users/samuelwong/Projects/GDS-dashboard/gsheets.py)
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 13, in <module>
+    from gsheets import update_gsheets
+ImportError: cannot import name 'update_gsheets' from 'gsheets' (/Users/samuelwong/Projects/GDS-dashboard/gsheets.py)
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 13, in <module>
+    from gsheets import update_gsheets
+ImportError: cannot import name 'update_gsheets' from 'gsheets' (/Users/samuelwong/Projects/GDS-dashboard/gsheets.py)
+2022-05-31
+Script updated at 2022-06-02 00:30
+2022-05-31
+Script updated at 2022-06-02 09:31
+2022-05-31
+Script updated at 2022-06-02 10:01
+2022-05-31
+Script updated at 2022-06-02 10:31
+2022-05-31
+Script updated at 2022-06-02 11:00
+2022-05-31
+Script updated at 2022-06-02 12:31
+2022-05-31
+Script updated at 2022-06-02 15:30
+2022-05-31
+Script updated at 2022-06-02 16:00
+2022-05-31
+Script updated at 2022-06-02 16:31
+2022-05-31
+Script updated at 2022-06-02 17:00
+2022-05-31
+Script updated at 2022-06-02 17:30
+2022-05-31
+Script updated at 2022-06-02 18:01
+Extracting data ...
+Transforming data ...
+2022-05-31
+Updating Google Sheets ...
+Script updated at 2022-06-02 22:31
+Extracting data ...
+Transforming data ...
+2022-06-01
+Updating Google Sheets ...
+Script updated at 2022-06-02 23:01
+Extracting data ...
+Transforming data ...
+2022-06-01
+Updating Google Sheets ...
+Script updated at 2022-06-02 23:31
+Extracting data ...
+Transforming data ...
+2022-06-02
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-06-02&limit=10000&symbols=AMJ%2CDVY%2CXLU%2CVYM%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 50, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 30, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 152, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Extracting data ...
+Transforming data ...
+2022-06-02
+Traceback (most recent call last):
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 234, in _one_request
+    resp.raise_for_status()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://data.alpaca.markets/v2/stocks/bars?timeframe=1Day&adjustment=raw&start=2019-01-01&end=2022-06-02&limit=10000&symbols=AMJ%2CDVY%2CXLU%2CVYM%2CSCHD
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 50, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/main.py", line 30, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 152, in full_df_pipeline
+    df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
+  File "/Users/samuelwong/Projects/GDS-dashboard/unrealized_profits.py", line 103, in get_data
+    data = api.get_bars(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 671, in get_bars
+    bars = list(self.get_bars_iter(symbol,
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 657, in get_bars_iter
+    for bar in bars:
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 577, in _data_get
+    resp = self.data_get(path, data=data, api_version=api_version)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 266, in data_get
+    return self._request(
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 213, in _request
+    return self._one_request(method, url, opts, retry)
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/alpaca_trade_api/rest.py", line 242, in _one_request
+    raise APIError(error, http_error)
+alpaca_trade_api.rest.APIError: your subscription does not permit querying data from the past 15 minutes
+Extracting data ...
+Transforming data ...
+2022-06-01
+Updating Google Sheets ...
+Realized profit's Table is updated.
+Unrealized profit's Table is updated.
+Portfolio changes' Table is updated.
+Transactions' Table is updated.
+Metrics' Table is updated
+Script updated at 2022-06-03 10:01
+Extracting data ...
+Transforming data ...
+2022-06-01
+Updating Google Sheets ...
+Realized profit's Table is updated.
+Unrealized profit's Table is updated.
+Portfolio changes' Table is updated.
+Transactions' Table is updated.
+Metrics' Table is updated
+Script updated at 2022-06-03 10:31
+Extracting data ...
+Transforming data ...
+2022-06-01
+Updating Google Sheets ...
+Realized profit's Table is updated.
+Unrealized profit's Table is updated.
+Portfolio changes' Table is updated.
+Transactions' Table is updated.
+Metrics' Table is updated
+Script updated at 2022-06-03 11:01
+Extracting data ...
+Transforming data ...
+2022-06-01
+Updating Google Sheets ...
+Realized profit's Table is updated.
+Unrealized profit's Table is updated.
+Portfolio changes' Table is updated.
+Transactions' Table is updated.
+Metrics' Table is updated
+Script updated at 2022-06-03 11:30
+Extracting data ...
+Transforming data ...
+2022-06-01
+Updating Google Sheets ...
+Realized profit's Table is updated.
+Unrealized profit's Table is updated.
+Portfolio changes' Table is updated.
+Transactions' Table is updated.
+Metrics' Table is updated
+Script updated at 2022-06-03 12:01
+Extracting data ...
+Transforming data ...
+2022-06-01
+Updating Google Sheets ...
+Realized profit's Table is updated.
+Unrealized profit's Table is updated.
+Portfolio changes' Table is updated.
+Transactions' Table is updated.
+Metrics' Table is updated
+Script updated at 2022-06-03 12:31
+Extracting data ...
+Transforming data ...
+2022-06-01
+Updating Google Sheets ...
+Realized profit's Table is updated.
+Unrealized profit's Table is updated.
+Portfolio changes' Table is updated.
+Transactions' Table is updated.
+Metrics' Table is updated
+Script updated at 2022-06-03 13:01
+Extracting data ...
+Transforming data ...
+2022-06-01
+Updating Google Sheets ...
+Realized profit's Table is updated.
+Unrealized profit's Table is updated.
+Portfolio changes' Table is updated.
+Transactions' Table is updated.
+Metrics' Table is updated
+Script updated at 2022-06-03 13:31
+Extracting data ...
+Transforming data ...
+2022-06-01
+Updating Google Sheets ...
+Realized profit's Table is updated.
+Unrealized profit's Table is updated.
+Portfolio changes' Table is updated.
+Transactions' Table is updated.
+Metrics' Table is updated
+Script updated at 2022-06-03 15:01
+Extracting data ...
+Transforming data ...
+2022-06-01
+Updating Google Sheets ...
+Realized profit's Table is updated.
+Unrealized profit's Table is updated.
+Portfolio changes' Table is updated.
+Transactions' Table is updated.
+Metrics' Table is updated
+Script updated at 2022-06-03 15:31
+Extracting data ...
+Transforming data ...
+2022-06-01
+Updating Google Sheets ...
+Realized profit's Table is updated.
+Unrealized profit's Table is updated.
+Portfolio changes' Table is updated.
+Transactions' Table is updated.
+Metrics' Table is updated
+Script updated at 2022-06-03 16:01
+/Users/samuelwong/opt/anaconda3/envs/algo_trade/bin/python: can't open file '/Users/samuelwong/Projects/GDS-dashboard/main.py': [Errno 2] No such file or directory
+/Users/samuelwong/opt/anaconda3/envs/algo_trade/bin/python: can't open file '/Users/samuelwong/Projects/GDS-dashboard/main.py': [Errno 2] No such file or directory
+/Users/samuelwong/opt/anaconda3/envs/algo_trade/bin/python: can't open file '/Users/samuelwong/Projects/GDS-dashboard/main.py': [Errno 2] No such file or directory

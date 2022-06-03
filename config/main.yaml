@@ -1,0 +1,11 @@
+cronitor:
+  api_key: 45b0013337744758895bf85013e1dc8d
+
+alpaca:
+  api_key_id: PKCHDD6J9DQDE7BZZ1UV
+  api_secret_key: lQ5hWAXPrGx2F0jEO0eiDULu1w2cOiG2liCeX101
+  api_base_url: https://paper-api.alpaca.markets
+
+gsheets:
+  path: ../credentials/algoquant-351309-ae021cd7392e.json
+  key: 1hPxsuwdDvpZpQYG2yi_djwcDG1RDAw1RcS-QZ5prUPo
