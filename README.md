@@ -17,15 +17,15 @@ The dashboard is hosted on Google Data Studio to display the key metrics and fig
         
         ![Untitled](Screenshots/Untitled.png)
         
-        ![Untitled](Screenshots/Untitled%201.png)
+        ![Untitled](Screenshots/Untitled_1.png)
         
     - Google Sheets
         
-        ![Untitled](Screenshots/Untitled%202.png)
+        ![Untitled](Screenshots/Untitled_2.png)
         
-        ![Untitled](Screenshots/Untitled%203.png)
+        ![Untitled](Screenshots/Untitled_3.png)
         
-        ![Untitled](Screenshots/Untitled%204.png)
+        ![Untitled](Screenshots/Untitled_4.png)
         
 
 # Built with
