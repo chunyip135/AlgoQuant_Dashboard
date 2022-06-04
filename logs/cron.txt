@@ -847,3 +847,17 @@ Script updated at 2022-06-03 16:01
 /Users/samuelwong/opt/anaconda3/envs/algo_trade/bin/python: can't open file '/Users/samuelwong/Projects/GDS-dashboard/main.py': [Errno 2] No such file or directory
 /Users/samuelwong/opt/anaconda3/envs/algo_trade/bin/python: can't open file '/Users/samuelwong/Projects/GDS-dashboard/main.py': [Errno 2] No such file or directory
 /Users/samuelwong/opt/anaconda3/envs/algo_trade/bin/python: can't open file '/Users/samuelwong/Projects/GDS-dashboard/main.py': [Errno 2] No such file or directory
+Extracting data ...
+Transforming data ...
+Traceback (most recent call last):
+  File "/Users/samuelwong/Projects/GDS-dashboard/src/main.py", line 61, in <module>
+    main()
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 70, in wrapped
+    raise e
+  File "/Users/samuelwong/opt/anaconda3/envs/algo_trade/lib/python3.9/site-packages/cronitor/__init__.py", line 66, in wrapped
+    out = func(*args, **kwargs)
+  File "/Users/samuelwong/Projects/GDS-dashboard/src/main.py", line 41, in main
+    unrealized_profit_output = full_df_pipeline(api)
+  File "/Users/samuelwong/Projects/GDS-dashboard/src/unrealized_profits.py", line 150, in full_df_pipeline
+    last_trading_date = pd.Timestamp(cal_ls[cal_ls[cal_ls == tdy_date].index -2].values[0]).strftime('%Y-%m-%d')
+IndexError: index 0 is out of bounds for axis 0 with size 0

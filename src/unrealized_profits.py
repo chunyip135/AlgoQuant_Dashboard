@@ -146,9 +146,7 @@ def full_df_pipeline(api):
 
 	cal_ls = get_trading_cal(api)
 	tdy_date = dt.datetime.strftime(dt.datetime.today(), format = '%Y-%m-%d')
-	#last_trading_date = cal_ls[cal_ls[cal_ls <= tdy_date].index[-3]].strftime('%Y-%m-%d')
-	last_trading_date = pd.Timestamp(cal_ls[cal_ls[cal_ls == tdy_date].index -2].values[0]).strftime('%Y-%m-%d')
-	print(last_trading_date)
+	last_trading_date = pd.Timestamp(cal_ls[cal_ls[cal_ls <= tdy_date].index[-1]]).strftime('%Y-%m-%d')
 	df_data = get_data(api, op_df.Symbol.unique(), start = '2019-01-01', end = last_trading_date)
 
 
