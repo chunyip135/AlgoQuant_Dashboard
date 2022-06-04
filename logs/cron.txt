@@ -841,3 +841,9 @@ Script updated at 2022-06-03 16:01
 /Users/samuelwong/opt/anaconda3/envs/algo_trade/bin/python: can't open file '/Users/samuelwong/Projects/GDS-dashboard/main.py': [Errno 2] No such file or directory
 /Users/samuelwong/opt/anaconda3/envs/algo_trade/bin/python: can't open file '/Users/samuelwong/Projects/GDS-dashboard/main.py': [Errno 2] No such file or directory
 /Users/samuelwong/opt/anaconda3/envs/algo_trade/bin/python: can't open file '/Users/samuelwong/Projects/GDS-dashboard/main.py': [Errno 2] No such file or directory
+/Users/samuelwong/opt/anaconda3/envs/algo_trade/bin/python: can't open file '/Users/samuelwong/Projects/GDS-dashboard/main.py': [Errno 2] No such file or directory
+/Users/samuelwong/opt/anaconda3/envs/algo_trade/bin/python: can't open file '/Users/samuelwong/Projects/GDS-dashboard/main.py': [Errno 2] No such file or directory
+/Users/samuelwong/opt/anaconda3/envs/algo_trade/bin/python: can't open file '/Users/samuelwong/Projects/GDS-dashboard/main.py': [Errno 2] No such file or directory
+/Users/samuelwong/opt/anaconda3/envs/algo_trade/bin/python: can't open file '/Users/samuelwong/Projects/GDS-dashboard/main.py': [Errno 2] No such file or directory
+/Users/samuelwong/opt/anaconda3/envs/algo_trade/bin/python: can't open file '/Users/samuelwong/Projects/GDS-dashboard/main.py': [Errno 2] No such file or directory
+/Users/samuelwong/opt/anaconda3/envs/algo_trade/bin/python: can't open file '/Users/samuelwong/Projects/GDS-dashboard/main.py': [Errno 2] No such file or directory
